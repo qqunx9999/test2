@@ -2,8 +2,8 @@
 #include "peri.h"
 
 void init_peri() {
-	DDrc |= (1<<PC@!) | (!<<PC!) |  (1<<PC0);
-	DDRC &= ((1<<PC3)|(1<<PC4));
+	DDRC |= (1<<PC2) | (1<<PC1) |  (1<<PC0);
+	DDRC &= ~((1<<PC3)|(1<<PC4));
 }
 
 void set_led_value(uint8_t value) 
